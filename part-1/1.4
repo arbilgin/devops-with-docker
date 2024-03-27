@@ -24,3 +24,9 @@ Searching..
 </body>
 </html>
 Input website:
+
+
+# Alternative solution
+
+docker run -it --name curler ubuntu sh -c 'apt-get update; apt-get install -y curl; while true; do echo "Input website:"; read website; ec
+ho "Searching.."; sleep 1; curl http://$website; done' 
