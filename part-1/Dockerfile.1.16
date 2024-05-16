@@ -1,0 +1,33 @@
+FROM node:18 as build-stage
+
+WORKDIR /usr/src/app
+
+COPY package* ./
+
+RUN npm ci
+
+COPY . .
+
+RUN npm run swizzle docusaurus-lunr-search SearchBar -- --eject --danger
+
+RUN npm run build
+
+FROM node:alpine
+
+ENV PORT 80
+
+RUN npm install -g serve
+
+COPY --from=build-stage /usr/src/app/build /usr/src/html
+
+CMD serve -l $PORT /usr/src/html
+
+
+# Cloned the repo of the course and 
+# built the docker image from Dockerfile inside the repo.
+# Tagged and pushed the image to DockerHub as a public image.
+# Used GCP Cloud Run service to deploy the image and passed the image url "docker.io/arbilgin/docker-course".
+# Set the machine configuration and passed 80 as the container port.
+# This is the link to the running app: 
+
+# https://docker-z2rhec5cpq-uc.a.run.app

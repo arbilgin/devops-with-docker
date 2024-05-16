@@ -1,0 +1,18 @@
+nodejs-app
+
+This app is a simple web application created using Node.js. It uses Wikipedia's Search API to search for anything entered by the user and parses the result in a JSON format. 
+The infobox of the Wikipedia page is parsed using wiki-infobox-parser.
+
+
+USAGE
+
+npm install
+
+npm start
+
+It runs on port 3000
+
+
+DOCKER-HUB LINK
+
+https://hub.docker.com/r/arbilgin/nodejs-app
