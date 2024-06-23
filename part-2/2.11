@@ -1,0 +1,4 @@
+I had developed a monitoring application in Python for our company's cloud infrastructure and it was running on Google Cloud App Engine.
+What I did after this course is to containerize the application by creating Dockerfiles for the backend and frontend.
+And, in docker compose file, I added volumes to store the data and logs of the application, and nginx proxy container to serve in front of the frontend and backend.
+Now, it is up with docker compose and running on a VM.
