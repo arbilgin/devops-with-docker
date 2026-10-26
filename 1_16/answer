@@ -1,0 +1,7 @@
+https://docker-course-314613098406.europe-west1.run.app
+
+Cloned the old repo of the course and 
+built the docker image from Dockerfile inside the repo.
+Tagged and pushed the image to DockerHub as a public image.
+Used GCP Cloud Run service to deploy the image and passed the image url "docker.io/arbilgin/docker-course".
+Set the machine configuration and passed 80 as the container port.
