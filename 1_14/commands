@@ -1,0 +1,4 @@
+docker build -t hello-frontend -f Dockerfile.frontend ..
+docker build -t hello-backend -f Dockerfile.backend ..
+docker run --name hello-frontend -p 5001:5001 hello-frontend
+docker run --name hello-backend -p 8080:8080 hello-backend
