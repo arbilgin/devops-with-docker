@@ -1,0 +1,2 @@
+docker build -t hello-frontend .
+docker run -d --name hello-frontend -p 5001:5001 hello-frontend
